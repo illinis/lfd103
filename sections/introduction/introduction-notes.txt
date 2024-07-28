@@ -1,0 +1,46 @@
+linus torvalds releases a new kernel and opens a 2 week merge window.
+
+during the merge window, he pulls code for the next release from subsystem maintainers.
+
+subsystem maintainers send signed git pull requests to linus either during the merge window or before.
+
+all major new development is added to the kernel during the merge window. 
+
+(patches -> changes to the kernel)
+
+after the merge window he releases the first release candidate (rc1)
+
+the new cycle begins witha  3-week quiet period, which starts a week before the release and continues through the 2-week merge window.
+(this is the part that overlaps)
+
+release candidates (rcs) are mainline kernel pre releases that are used for testing new features in the mainline;
+kernel developers test these releases for bugs and regressions
+
+stable releases are bug fix-only releases. After Linus releases a mainline kernel, it moves into stable mode.
+
+Long-term releases are stable releases selected for long-term maintenance to provide critical bug fixes for older kernel trees.
+
+the mainline kernel tree is maintained by Linus Torvalds. This is where he releases mainline kernels and RC releases
+
+the stable tree is maintained by Greg Kroah. This tree consists of stable release branches
+
+the linux next tree is the integration tree maintained by stephen rothwell. Code from a large number of subsystem trees gets pulled into this tree periodically and then released for integration testing.
+
+each major subsystem has its own tree and designated maintainers. You can find a list of subsystems and their maintainers in the MAINTAINERS file in the kernel source.
+
+almost every kernel subsystem has a mailing list.
+
+lore.kernel.org -> list of mailing lists and their archives
+
+The development process itself happens entirely over emails.
+
+kernel.org -> list of kernel trees.
+
+you can find subsystem git information and mailing lists for each of the subsystems in the maintainers file.
+
+(incomplete tex file)
+missing parts:
+	* kernel definition
+	* the kernel development process definitions
+	* the kernel development process specifications 
+
