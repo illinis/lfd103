@@ -1,0 +1,62 @@
+git book - commit history, working with remotes, creating branches, tags, and rebasing to tagged versions.
+
+developers send changes they want to see in the kernel to the kernel mailing lists through email. this changes are called patches.
+
+patches are small incremental changes made to the kernel.
+
+each patch contains a change to the kernel that implements  onde independent modification that stands on its own.
+
+a patch cannot break the kernel build.
+
+patches being independent modifications makes it easier to isolate regressions. 
+
+complex changes to the kernel are split into smaller chunks.
+
+
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+
+maintainers have their personal preferences on how granular the patch splitting should be for their subsystems.
+maintainers are good about giving feedback on their preferences during the patch review
+
+-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+
+what is in a patch?
+
+patch components
+
+	1)commitID - auto-generated SHA 1 hash is generated from a cryptographic hash function that has all the important information about the patch, such as the commit date, committers name and email address, log message and more. changing any of the information associated with the commitID results in changing it. this makes it a temperproof fast way to compare two commits using the IDs, and git pull requests become fast and efficient.
+	2)commit header - 
+		structure:
+		major subsystem: minor area: short description of what is being changed.
+			
+	3)commit log - detailed description of the change and why the change is made.
+	4)this component provides the author's name and email information. this information can be specified when you run git commit or it can be configured in your .gitconfig file, which is a very convenient way to generate commits.
+	5)authorDate - auto-generated commit time and date.
+	6)commit - the committer's name and email address. the committer is a maintainer or developer that applies the patch to a git repository.
+	7)commit date - auto-generated commit time and date when Greg KH applied this patch to the usb tree.
+	8)signed-off-by - using sign-off, developers certify the patch to be their original work or have the right to pass it on as an open source patch.
+
+patch tags
+	
+	1)acked-by - used by the maintainer of the affected code when that maintainer neither contributed to, nor forwarded the patch. 
+	2)reviewed-by - indicates that the patch has been reviewed by the person named in the tag
+	3)reported-by - gives credit to people who find bugs and report them
+	4)tested-by - indicates that the patch has been tested by the person named in the tag
+	5)suggested-by - used to give credit for the patch idea to the person named in the tag
+	6)fixes - indicates that the patch fixes an issue in a previous commit referenced by its Commit ID. (allow us to track where the bug originated)
+
+patch email subject line conventions
+
+	[PATCH] prefix is used to indicate that the email consists of a patch.
+	[PATCH RFC] or [RFC PATCH] indicates the author is requesting comments on the patch. RFC stands for "request for commands".
+	[PATCH v4] is used to indicate that the patch is the 4th version of this specific change that is being submitted. 
+
+patch version history
+
+	it is a requiremente to include the patch version history when sending a re-worked patch.
+	the patch revision history on what changed between the current version and the previous version is added between the "---" and the "start of the diff" in the patch file.
+
+	any text that is added here gets thrown away and will not be included in the commit when it is merged into the source tree. it is good practice to include information that helps with reviews and doesn't add value to the commit log here.
+	
+
+
