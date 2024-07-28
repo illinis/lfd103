@@ -1,0 +1,6 @@
+configuring the development system:
+
+	have a laptop;
+	install a distribution of your choice;
+	
+	
