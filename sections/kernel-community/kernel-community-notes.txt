@@ -1,0 +1,16 @@
+The linux kernel contributor covenant code of conduct
+
+the linux kernel is often a labor of love of a community that truly thinks independently together.
+we value diversity of thought in solving technical problems.
+
+it is important for us to foster and promote a welcoming environment to developers from all backgrounds.
+
+contributors and maintainers pledge to foster an open and welcoming environment and community to participate in and become part of; a welcoming place where people can speak their mind respectfully in expressing different viewpoints and coming to consensus on technical problems.
+the kernel community provides a contributor code of conduct document which outlines a generic set of rules, and another document that provides more specific guidelines that apply to the linux kernel community to suit its unique needs.
+
+linux enforcement statement
+
+as linux kernel developers, we have a keen interest in how our software is used and how the license for our software is enforced. we try to balance the enforcement actions with the health and growth of the Linux kernel ecosystem.
+
+“The intent is to encourage more use of the software and we want companies and individuals to use, modify and distribute this software. We want to work with users in an open and transparent way to eliminate any uncertainty about our expectations regarding compliance or enforcement that might limit adoption of our software. We view legal action as a last resort, to be initiated only when other community efforts have failed to resolve the problem.”
+
