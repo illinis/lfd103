@@ -1,0 +1,22 @@
+introduction to exploring linux kernel sources
+
+Linux Mainline
+
+"I prefer creating a separate workspace (not under my home directory) for my upstream work to explore git repositories." -lfd103
+
+clone linux master branch
+clone linux mainline
+
+git clone git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git linux_mainline
+
+the bulk of the kernel code lives under the drivers subdirectory.
+
+"Take a look at the Makefile and MAINTAINERS files in the main directory and scripts/get_maintainer.pl and scripts/checkpatch.pl. You will be using them in your everyday kernel development life.
+
+Play with cregit or git log to look at the history of source files in each of the kernel areas. You can look at individual commits and generate a patch or two using
+
+git format-patch -1 <commit ID>
+
+as shown in the example presented in this screenshot."
+
+-- -- -- -- -- -- -- -- -- -- -- --
