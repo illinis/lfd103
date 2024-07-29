@@ -2,5 +2,32 @@ configuring the development system:
 
 	have a laptop;
 	install a distribution of your choice;
+
+necessary packages:
+
+	sudo apt-get install build-essential vim git cscope libncurses-dev libssl-dev bison flex
+
+	sudo apt-get install git-email	
+
+setting up git-email:
 	
+.gitconfig
+[sendemail]
+    smtpserver = smtp.gmail.com
+    smtpuser = your_email@gmail.com
+    smtppass = your_app_password
+    smtpserverport = 587
+    smtpencryption = tls
 	
+setting up the email client
+
+bottom posting: Never top post in your response. Top posting is writing a message above the original text while sending a response to an email. Add your response at the bottom of the original text. Bottom posting makes it easier to read and follow review comments on a patch.
+
+Inline post: When reviewing or responding to a patch, deleting or stripping parts of the message you are not replying to is a good practice, and makes it easier to follow the responses in the thread.
+
+No HTML format: Disable compose messages in HTML format. Patches sent using HTML format will be rejected by the development mailing lists automatically.
+
+No signatures: Do not include private information in your signature.
+
+No attachments: Do not send patches as attachments.
+
