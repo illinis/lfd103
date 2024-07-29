@@ -1,0 +1,19 @@
+Building and Installing Your First Kernel:
+
+$ git clone git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git linux_stable
+$ git branch -a | grep linux-$version
+
+Starting out with the distribution configuration file is the safest approach for the very first kernel install on any system. You can do so by copying the configuration for your current kernel from /proc/config.gz or /boot.
+
+make all will invoke make oldconfig in any case. I am showing these two steps separately just to call out the configuration file generation step.
+
+$ make oldconfig
+
+$ lsmod > /tmp/my-lsmod
+$ make LSMOD=/tmp/my-lsmod localmodconfig
+
+(make sure elfutils and libelf are installed).
+
+once the kernel compilation is complete, install the new kernel:
+
+$ su -c "make modules_install install"
